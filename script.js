@@ -15,6 +15,14 @@ function createSquare(numberOfDivToCreate) {
 
         gridSize--
     }
+    let divSquare = document.querySelectorAll(".grid");
+    divSquare.forEach(changeBackgroundColor);
 }
 
 createSquare(16)
+
+function changeBackgroundColor(elem) {
+    elem.addEventListener("mouseover", () => {
+        elem.style.background = 'pink'
+    })
+}
