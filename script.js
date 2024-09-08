@@ -45,7 +45,18 @@ function createSquare(numberOfDivToCreate) {
 createSquare(16)
 
 function changeBackgroundColor(elem) {
-    elem.addEventListener("mouseover", () => {
-        elem.style.background = 'pink'
-    })
+    elem.addEventListener("mouseover", colorSquare)
+}
+
+function createRandomNumber(num){
+    return Math.floor(Math.random() * num)
+};
+
+function colorSquare(){
+    this.style.backgroundColor = 'rgb(' + createRandomNumber(225) 
+    + ',' 
+    + createRandomNumber(225) 
+    + ',' 
+    + createRandomNumber(225) 
+    + ')'
 }
